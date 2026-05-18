@@ -59,13 +59,13 @@ body::before{
 }
 
 .clock{
-    font-size:110px;
+    font-size:75px;
     color:#9cff00;
     font-weight:bold;
 }
 
 .wib{
-    font-size:30px;
+    font-size:20px;
 }
 
 /* CONTENT */
@@ -87,7 +87,7 @@ body::before{
 
 /* TITLE */
 .card h2{
-    font-size:40px;
+    font-size:28px;
     margin-bottom:20px;
     color:white;
 }
@@ -100,7 +100,7 @@ body::before{
     margin-bottom:15px;
     background:#0b2211;
     border-radius:15px;
-    font-size:35px;
+    font-size:24px;
     border:1px solid rgba(0,255,100,0.3);
 }
 
@@ -112,7 +112,7 @@ body::before{
 /* INFO */
 .info-item{
     margin-bottom:25px;
-    padding:20px;
+    padding:14px;
     background:#0b2211;
     border-radius:15px;
 }
@@ -120,11 +120,11 @@ body::before{
 .info-item h3{
     color:#9cff00;
     margin-bottom:10px;
-    font-size:35px;
+    font-size:24px;
 }
 
 .info-item p{
-    font-size:28px;
+    font-size:18px;
     color:#ddd;
 }
 
@@ -136,10 +136,25 @@ body::before{
     padding:15px;
     position:absolute;
     bottom:0;
-    font-size:32px;
+    font-size:20px;
     border-top:2px solid #9cff00;
 }
 
 .marquee span{
     color:#ffc400;
+}
+@media(max-width:1200px){
+
+.container{
+    flex-direction:column;
+}
+
+.clock{
+    font-size:60px;
+}
+
+.logo h1{
+    font-size:40px;
+}
+
 }
