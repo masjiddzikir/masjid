@@ -1,18 +1,20 @@
-function updateClock() {
-  const now = new Date();
+function updateClock(){
 
-  const time = now.toLocaleTimeString('id-ID');
+const now = new Date();
 
-  const date = now.toLocaleDateString('id-ID', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
+let h = now.getHours();
+let m = now.getMinutes();
+let s = now.getSeconds();
 
-  document.getElementById('clock').innerHTML = time;
-  document.getElementById('date').innerHTML = date;
+h = h < 10 ? "0"+h : h;
+m = m < 10 ? "0"+m : m;
+s = s < 10 ? "0"+s : s;
+
+document.getElementById("clock").innerHTML =
+h + ":" + m + ":" + s;
+
 }
 
-setInterval(updateClock, 1000);
+setInterval(updateClock,1000);
+
 updateClock();
