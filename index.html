@@ -1,70 +1,142 @@
 <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Masjid Dzikir</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="container">
+<!-- HEADER -->
+<div class="header">
 
-    <!-- HEADER -->
-    <div class="header">
-      <h1>MASJID DZIKIR</h1>
-      <p>Jam Digital & Media Informasi Masjid</p>
-    </div>
+<div class="logo">
+<h1>MASJID <span>DZIKIR</span></h1>
+<div class="subtitle">
+Jam Digital & Media Informasi Masjid
+</div>
+</div>
 
-    <!-- JAM -->
-    <div class="clock-box">
-      <div id="clock">00:00:00</div>
-      <div id="date">Loading...</div>
-    </div>
+<div class="clock-box">
+<div id="clock" class="clock">00:00:00</div>
+<div class="wib">Waktu Indonesia Barat</div>
+</div>
 
-    <!-- JADWAL SHOLAT -->
-    <div class="prayer-box">
-      <h2>Jadwal Sholat</h2>
+</div>
 
-      <div class="prayer-row">
-        <span>Subuh</span>
-        <span>04:45</span>
-      </div>
+<!-- CONTENT -->
+<div class="container">
 
-      <div class="prayer-row">
-        <span>Dzuhur</span>
-        <span>12:03</span>
-      </div>
+<!-- JADWAL -->
+<div class="card">
 
-      <div class="prayer-row">
-        <span>Ashar</span>
-        <span>15:20</span>
-      </div>
+<h2>JADWAL SHOLAT</h2>
 
-      <div class="prayer-row">
-        <span>Maghrib</span>
-        <span>18:01</span>
-      </div>
+<div class="sholat-item">
+Subuh
+<span>04:45</span>
+</div>
 
-      <div class="prayer-row">
-        <span>Isya</span>
-        <span>19:10</span>
-      </div>
-    </div>
+<div class="sholat-item">
+Dzuhur
+<span>12:03</span>
+</div>
 
-    <!-- INFORMASI -->
-    <div class="info-box">
-      <h2>Informasi Masjid</h2>
+<div class="sholat-item">
+Ashar
+<span>15:20</span>
+</div>
 
-      <marquee behavior="scroll" direction="left">
-        Kajian Rutin Setiap Jumat Ba’da Maghrib |
-        Donasi Pembangunan Masjid Dibuka |
-        Mohon Mematikan HP Saat Sholat |
-        TPQ Dimulai Jam 16:00 WIB
-      </marquee>
-    </div>
+<div class="sholat-item">
+Maghrib
+<span>18:01</span>
+</div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-      © 2026 Masjid Dzikir
-    </div>
+<div class="sholat-item">
+Isya
+<span>19:10</span>
+</div>
 
-  </div>
+</div>
 
-  <script src="script.js"></script>
+<!-- INFORMASI -->
+<div class="card">
+
+<h2>INFORMASI MASJID</h2>
+
+<div class="info-item">
+<h3>Pengajian Rutin</h3>
+<p>Setiap Hari Ahad - 16:00 WIB</p>
+</div>
+
+<div class="info-item">
+<h3>Kotak Infaq</h3>
+<p>Mari ikut pembangunan masjid</p>
+</div>
+
+<div class="info-item">
+<h3>Baca Al-Qur'an</h3>
+<p>Sebaik-baik manusia adalah yang belajar Al-Qur'an</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- RUNNING TEXT -->
+<div class="marquee">
+<marquee>
+<span>INFO :</span>
+Selamat datang di Masjid Dzikir â€¢
+Mari memakmurkan masjid â€¢
+Jaga kebersihan masjid
+</marquee>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+3. GANTI TOTAL script.js
+function updateClock(){
+
+const now = new Date();
+
+let h = now.getHours();
+let m = now.getMinutes();
+let s = now.getSeconds();
+
+h = h < 10 ? "0"+h : h;
+m = m < 10 ? "0"+m : m;
+s = s < 10 ? "0"+s : s;
+
+document.getElementById("clock").innerHTML =
+h + ":" + m + ":" + s;
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+HASILNYA
+
+Nanti tampilannya:
+
+fullscreen modern
+hijau neon
+jam besar
+glow effect
+dashboard masjid
+mirip TV informasi masjid
+
+SETELAH ITU:
+
+upload ulang file
+commit changes
+refresh website github pages
+
+Maka tampilannya langsung berubah total seperti gambar modern tadi.
