@@ -96,7 +96,7 @@ body::before{
 .sholat-item{
     display:flex;
     justify-content:space-between;
-    padding:20px;
+    padding:15px;
     margin-bottom:15px;
     background:#0b2211;
     border-radius:15px;
