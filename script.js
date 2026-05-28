@@ -30,7 +30,7 @@ updateClock();
 
 const jadwal = {
 
-    subuh  : "04:15",
+    subuh  : "09:00",
     dzuhur : "11:30",
     ashar  : "14:53",
     maghrib: "17:40",
