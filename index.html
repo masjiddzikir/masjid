@@ -1,189 +1,580 @@
-<!-- ===================================================== -->
-<!-- FILE : index.html                                     -->
-<!-- ===================================================== -->
-
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Masjid Dzikir Digital</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Masjid Dzikir</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#00160d;
+            color:white;
+            overflow:hidden;
+        }
+
+        .container{
+            width:100%;
+            height:100vh;
+            padding:15px;
+            display:flex;
+            flex-direction:column;
+        }
+
+        /* =======================
+           HEADER
+        ======================= */
+
+        .top{
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            margin-bottom:15px;
+        }
+
+        .logo-area{
+            display:flex;
+            align-items:center;
+            gap:15px;
+        }
+
+        .logo{
+            width:85px;
+            height:85px;
+            border-radius:50%;
+            object-fit:cover;
+            border:3px solid #9cff00;
+        }
+
+        .logo-text h1{
+            font-size:58px;
+            font-weight:bold;
+        }
+
+        .logo-text span{
+            color:#9cff00;
+        }
+
+        .logo-text p{
+            font-size:22px;
+            margin-top:5px;
+        }
+
+        /* =======================
+           CLOCK
+        ======================= */
+
+        .clock-box{
+            width:430px;
+            background:#01210f;
+            border:3px solid #9cff00;
+            border-radius:25px;
+            padding:20px;
+            text-align:center;
+
+            box-shadow:0 0 25px #00ff88;
+        }
+
+        #clock{
+            font-size:90px;
+            color:#9cff00;
+            font-weight:bold;
+        }
+
+        .clock-box p{
+            margin-top:10px;
+            font-size:22px;
+        }
+
+        /* =======================
+           MAIN
+        ======================= */
+
+        .main{
+            display:flex;
+            gap:15px;
+            flex:1;
+        }
+
+        .left,
+        .right{
+            flex:1;
+            border:3px solid #9cff00;
+            border-radius:25px;
+            padding:20px;
+        }
+
+        .left h2,
+        .right h2{
+            font-size:42px;
+            margin-bottom:20px;
+        }
+
+        /* =======================
+           SHOLAT
+        ======================= */
+
+        .prayer{
+            background:#012b15;
+            border:1px solid #00aa55;
+            border-radius:20px;
+
+            padding:18px 25px;
+            margin-bottom:15px;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            font-size:28px;
+        }
+
+        .prayer-time{
+            color:#ffd000;
+            font-weight:bold;
+        }
+
+        /* =======================
+           IQOMAH
+        ======================= */
+
+        .iqomah-box{
+            display:none;
+
+            margin-top:20px;
+
+            background:#021f10;
+
+            border:2px solid #00ff88;
+
+            border-radius:20px;
+
+            padding:20px;
+
+            text-align:center;
+        }
+
+        .iqomah-title{
+            font-size:30px;
+            color:#9cff00;
+            margin-bottom:10px;
+        }
+
+        #iqomah{
+            font-size:65px;
+            font-weight:bold;
+        }
+
+        /* =======================
+           INFO
+        ======================= */
+
+        .info-box{
+            background:#012b15;
+            border-radius:20px;
+            padding:18px;
+            margin-bottom:18px;
+        }
+
+        .info-box h3{
+            color:#9cff00;
+            font-size:28px;
+            margin-bottom:10px;
+        }
+
+        .info-box p{
+            font-size:20px;
+            line-height:1.5;
+        }
+
+        .kas{
+            font-size:45px;
+            font-weight:bold;
+            margin:10px 0;
+        }
+
+        /* =======================
+           RUNNING TEXT
+        ======================= */
+
+        .running{
+            margin-top:15px;
+
+            background:black;
+
+            border-top:2px solid #9cff00;
+
+            padding:12px;
+
+            font-size:24px;
+
+            color:white;
+        }
+
+        .running span{
+            color:#ffd000;
+            font-weight:bold;
+        }
+
+        /* =======================
+           RESPONSIVE
+        ======================= */
+
+        @media(max-width:1200px){
+
+            body{
+                overflow:auto;
+            }
+
+            .top{
+                flex-direction:column;
+                gap:20px;
+            }
+
+            .main{
+                flex-direction:column;
+            }
+
+            .clock-box{
+                width:100%;
+            }
+
+            #clock{
+                font-size:70px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-
-    <div class="logo-area">
-
-        <!-- GANTI LOGO -->
-        <img src="logo.png" class="logo-img">
-
-        <div class="logo">
-            <h1>MASJID <span>DZIKIR</span></h1>
-            <div class="subtitle">
-                Jam Digital & Media Informasi Masjid
-            </div>
-        </div>
-
-    </div>
-
-    <!-- JAM -->
-    <div class="clock-box">
-        <div id="clock" class="clock">00:00:00</div>
-        <div class="wib">Waktu Indonesia Barat</div>
-    </div>
-
-</div>
-
-<!-- CONTENT -->
 <div class="container">
 
-    <!-- JADWAL SHOLAT -->
-    <div class="card">
+    <!-- HEADER -->
 
-        <h2>JADWAL SHOLAT</h2>
+    <div class="top">
 
-        <div class="sholat-item">
-            Subuh
-            <span>04:45</span>
+        <div class="logo-area">
+
+            <img src="logo.png" class="logo">
+
+            <div class="logo-text">
+
+                <h1>
+                    MASJID <span>DZIKIR</span>
+                </h1>
+
+                <p>
+                    Ds: Tuwiri Wetan,
+                    Kec: Merakurak,
+                    Kab: Tuban
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="sholat-item">
-            Dzuhur
-            <span>12:03</span>
-        </div>
+        <!-- CLOCK -->
 
-        <div class="sholat-item">
-            Ashar
-            <span>15:20</span>
-        </div>
+        <div class="clock-box">
 
-        <div class="sholat-item">
-            Maghrib
-            <span>18:01</span>
-        </div>
+            <div id="clock">
+                00:00:00
+            </div>
 
-        <div class="sholat-item">
-            Isya
-            <span>19:10</span>
+            <p>Waktu Indonesia Barat</p>
+
         </div>
 
     </div>
 
-    <!-- IQOMAH -->
-    <div class="card">
+    <!-- MAIN -->
 
-        <h2>COUNTDOWN IQOMAH</h2>
+    <div class="main">
 
-        <div class="iqomah-item">
-            <div>
-                <span class="nama">Subuh</span>
-                <small>Iqomah 10 menit</small>
+        <!-- LEFT -->
+
+        <div class="left">
+
+            <h2>JADWAL SHOLAT</h2>
+
+            <div class="prayer">
+                <div>Subuh</div>
+                <div class="prayer-time">04:15</div>
             </div>
-            <div class="countdown" id="subuh-count">10:00</div>
-        </div>
 
-        <div class="iqomah-item">
-            <div>
-                <span class="nama">Dzuhur</span>
-                <small>Iqomah 15 menit</small>
+            <div class="prayer">
+                <div>Dzuhur</div>
+                <div class="prayer-time">11:30</div>
             </div>
-            <div class="countdown" id="dzuhur-count">15:00</div>
-        </div>
 
-        <div class="iqomah-item">
-            <div>
-                <span class="nama">Ashar</span>
-                <small>Iqomah 10 menit</small>
+            <div class="prayer">
+                <div>Ashar</div>
+                <div class="prayer-time">14:53</div>
             </div>
-            <div class="countdown" id="ashar-count">10:00</div>
-        </div>
 
-        <div class="iqomah-item">
-            <div>
-                <span class="nama">Maghrib</span>
-                <small>Iqomah 5 menit</small>
+            <div class="prayer">
+                <div>Maghrib</div>
+                <div class="prayer-time">17:40</div>
             </div>
-            <div class="countdown" id="maghrib-count">05:00</div>
-        </div>
 
-        <div class="iqomah-item">
-            <div>
-                <span class="nama">Isya</span>
-                <small>Iqomah 10 menit</small>
+            <div class="prayer">
+                <div>Isya</div>
+                <div class="prayer-time">18:50</div>
             </div>
-            <div class="countdown" id="isya-count">10:00</div>
-        </div>
 
-    </div>
+            <!-- IQOMAH -->
 
-</div>
+            <div class="iqomah-box"
+                 id="iqomah-box">
 
-<!-- INFORMASI -->
-<div class="container">
+                <div class="iqomah-title"
+                     id="iqomah-title">
 
-    <div class="card">
+                    IQOMAH
 
-        <h2>INFORMASI MASJID</h2>
-
-        <div class="info-item">
-            <h3>Pengajian Rutin</h3>
-            <p>Setiap Ahad Ba'da Maghrib</p>
-        </div>
-
-        <div class="info-item">
-            <h3>TPQ Anak</h3>
-            <p>Dimulai Jam 16:00 WIB</p>
-        </div>
-
-        <div class="info-item">
-            <h3>Kotak Infaq</h3>
-
-            <p>Total Kas :</p>
-
-            <h2>Rp 15.000.000</h2>
-
-            <div class="kas-box">
-
-                <div class="masuk">
-                    <span>Pemasukan</span>
-                    <strong>Rp 2.000.000</strong>
                 </div>
 
-                <div class="keluar">
-                    <span>Pengeluaran</span>
-                    <strong>Rp 500.000</strong>
+                <div id="iqomah">
+                    00:00
                 </div>
 
             </div>
 
         </div>
 
+        <!-- RIGHT -->
+
+        <div class="right">
+
+            <h2>INFORMASI MASJID</h2>
+
+            <div class="info-box">
+
+                <h3>Pengajian Rutin</h3>
+
+                <p>
+                    Setiap Hari Ahad
+                    - 16:00 WIB
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>Kotak Infaq</h3>
+
+                <p>Total Kas :</p>
+
+                <div class="kas">
+                    Rp 15.000.000
+                </div>
+
+                <p>
+                    Pemasukan Rp 2.000.000
+                    <br>
+                    Pengeluaran Rp 500.000
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>Baca Al-Qur'an</h3>
+
+                <p>
+                    Sebaik-baik manusia
+                    adalah yang belajar
+                    Al-Qur'an
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RUNNING TEXT -->
+
+    <div class="running">
+
+        <marquee>
+
+            <span>INFO :</span>
+
+            Selamat datang di Masjid Dzikir •
+            Mari memakmurkan masjid •
+            Jaga kebersihan masjid •
+
+        </marquee>
+
     </div>
 
 </div>
 
-<!-- RUNNING TEXT -->
-<div class="marquee">
+<script>
 
-<marquee>
-<span>INFO :</span>
-Selamat datang di Masjid Dzikir •
-Mari memakmurkan masjid •
-Mohon mematikan HP saat sholat •
-Jaga kebersihan masjid
-</marquee>
+    // =========================
+    // JAM DIGITAL
+    // =========================
 
-</div>
+    function updateClock(){
 
-<script src="script.js"></script>
+        const now = new Date();
+
+        let h = now.getHours();
+        let m = now.getMinutes();
+        let s = now.getSeconds();
+
+        h = h < 10 ? "0"+h : h;
+        m = m < 10 ? "0"+m : m;
+        s = s < 10 ? "0"+s : s;
+
+        document.getElementById("clock")
+        .innerHTML =
+        h + ":" + m + ":" + s;
+
+    }
+
+    setInterval(updateClock,1000);
+
+    updateClock();
+
+
+    // =========================
+    // JADWAL SHOLAT
+    // =========================
+
+    const jadwal = {
+
+        subuh  : "04:15",
+        dzuhur : "11:30",
+        ashar  : "14:53",
+        maghrib: "17:40",
+        isya   : "18:50"
+
+    };
+
+    // =========================
+    // IQOMAH MENIT
+    // =========================
+
+    const iqomahMenit = {
+
+        subuh  : 10,
+        dzuhur : 15,
+        ashar  : 10,
+        maghrib: 5,
+        isya   : 10
+
+    };
+
+    let countdownAktif = false;
+
+    // =========================
+    // CEK WAKTU SHOLAT
+    // =========================
+
+    function cekIqomah(){
+
+        if(countdownAktif) return;
+
+        const now = new Date();
+
+        let jam =
+        String(now.getHours())
+        .padStart(2,'0');
+
+        let menit =
+        String(now.getMinutes())
+        .padStart(2,'0');
+
+        let sekarang =
+        jam + ":" + menit;
+
+        for(let sholat in jadwal){
+
+            if(sekarang === jadwal[sholat]){
+
+                mulaiIqomah(
+                    sholat,
+                    iqomahMenit[sholat]
+                );
+
+            }
+
+        }
+
+    }
+
+    setInterval(cekIqomah,1000);
+
+    // =========================
+    // COUNTDOWN IQOMAH
+    // =========================
+
+    function mulaiIqomah(nama, menit){
+
+        countdownAktif = true;
+
+        let totalDetik = menit * 60;
+
+        document.getElementById("iqomah-box")
+        .style.display = "block";
+
+        document.getElementById("iqomah-title")
+        .innerHTML =
+        "IQOMAH " + nama.toUpperCase();
+
+        const hitung =
+        setInterval(() => {
+
+            let m =
+            Math.floor(totalDetik / 60);
+
+            let s =
+            totalDetik % 60;
+
+            m = m < 10 ? "0"+m : m;
+            s = s < 10 ? "0"+s : s;
+
+            document.getElementById("iqomah")
+            .innerHTML =
+            m + ":" + s;
+
+            totalDetik--;
+
+            if(totalDetik < 0){
+
+                clearInterval(hitung);
+
+                document.getElementById("iqomah-box")
+                .style.display = "none";
+
+                countdownAktif = false;
+
+            }
+
+        },1000);
+
+    }
+
+</script>
 
 </body>
 </html>
