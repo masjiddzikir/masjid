@@ -1,12 +1,18 @@
+<!-- ===================================================== -->
+<!-- FILE : index.html                                     -->
+<!-- ===================================================== -->
+
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Masjid Dzikir</title>
+<title>Masjid Dzikir Digital</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -14,102 +20,167 @@
 <!-- HEADER -->
 <div class="header">
 
-<div class="logo">
-<h1>MASJID <span>DZIKIR</span></h1>
-<div class="subtitle">
-Ds: Tuwiri Wetan, Kec: Merakurak, Kab: Tuban
-</div>
-</div>
+    <div class="logo-area">
 
-<div class="clock-box">
-<div id="clock" class="clock">00:00:00</div>
-<div class="wib">Waktu Indonesia Barat</div>
-</div>
+        <!-- GANTI LOGO -->
+        <img src="logo.png" class="logo-img">
+
+        <div class="logo">
+            <h1>MASJID <span>DZIKIR</span></h1>
+            <div class="subtitle">
+                Jam Digital & Media Informasi Masjid
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JAM -->
+    <div class="clock-box">
+        <div id="clock" class="clock">00:00:00</div>
+        <div class="wib">Waktu Indonesia Barat</div>
+    </div>
 
 </div>
 
 <!-- CONTENT -->
 <div class="container">
 
-<!-- JADWAL -->
-<div class="card">
+    <!-- JADWAL SHOLAT -->
+    <div class="card">
 
-<h2>JADWAL SHOLAT</h2>
+        <h2>JADWAL SHOLAT</h2>
 
-<div class="sholat-item">
-Subuh
-<span>04:15</span>
-</div>
+        <div class="sholat-item">
+            Subuh
+            <span>04:45</span>
+        </div>
 
-<div class="sholat-item">
-Dzuhur
-<span>11:30</span>
-</div>
+        <div class="sholat-item">
+            Dzuhur
+            <span>12:03</span>
+        </div>
 
-<div class="sholat-item">
-Ashar
-<span>14:53</span>
-</div>
+        <div class="sholat-item">
+            Ashar
+            <span>15:20</span>
+        </div>
 
-<div class="sholat-item">
-Maghrib
-<span>17:24</span>
-</div>
+        <div class="sholat-item">
+            Maghrib
+            <span>18:01</span>
+        </div>
 
-<div class="sholat-item">
-Isya
-<span>18:37</span>
-</div>
+        <div class="sholat-item">
+            Isya
+            <span>19:10</span>
+        </div>
+
+    </div>
+
+    <!-- IQOMAH -->
+    <div class="card">
+
+        <h2>COUNTDOWN IQOMAH</h2>
+
+        <div class="iqomah-item">
+            <div>
+                <span class="nama">Subuh</span>
+                <small>Iqomah 10 menit</small>
+            </div>
+            <div class="countdown" id="subuh-count">10:00</div>
+        </div>
+
+        <div class="iqomah-item">
+            <div>
+                <span class="nama">Dzuhur</span>
+                <small>Iqomah 15 menit</small>
+            </div>
+            <div class="countdown" id="dzuhur-count">15:00</div>
+        </div>
+
+        <div class="iqomah-item">
+            <div>
+                <span class="nama">Ashar</span>
+                <small>Iqomah 10 menit</small>
+            </div>
+            <div class="countdown" id="ashar-count">10:00</div>
+        </div>
+
+        <div class="iqomah-item">
+            <div>
+                <span class="nama">Maghrib</span>
+                <small>Iqomah 5 menit</small>
+            </div>
+            <div class="countdown" id="maghrib-count">05:00</div>
+        </div>
+
+        <div class="iqomah-item">
+            <div>
+                <span class="nama">Isya</span>
+                <small>Iqomah 10 menit</small>
+            </div>
+            <div class="countdown" id="isya-count">10:00</div>
+        </div>
+
+    </div>
 
 </div>
 
 <!-- INFORMASI -->
-<div class="card">
+<div class="container">
 
-<h2>INFORMASI MASJID</h2>
+    <div class="card">
 
-<div class="info-item">
-<h3>Pengajian Rutin</h3>
-<p>Setiap Hari Ahad - 16:00 WIB</p>
-</div>
+        <h2>INFORMASI MASJID</h2>
 
-<div class="info-box">
-<h3>Kotak Infaq</h3>
+        <div class="info-item">
+            <h3>Pengajian Rutin</h3>
+            <p>Setiap Ahad Ba'da Maghrib</p>
+        </div>
 
-<p>Total Kas :</p>
-<h2>Rp 15.000.000</h2>
+        <div class="info-item">
+            <h3>TPQ Anak</h3>
+            <p>Dimulai Jam 16:00 WIB</p>
+        </div>
 
-<div class="kas-box">
-<div class="masuk">
-<span>Pemasukan</span>
-<strong>Rp 2.000.000</strong>
-</div>
+        <div class="info-item">
+            <h3>Kotak Infaq</h3>
 
-<div class="keluar">
-<span>Pengeluaran</span>
-<strong>Rp 500.000</strong>
-</div>
-</div>
+            <p>Total Kas :</p>
 
-</div>
+            <h2>Rp 15.000.000</h2>
 
-<div class="info-item">
-<h3>Baca Al-Qur'an</h3>
-<p>Sebaik-baik manusia adalah yang belajar Al-Qur'an</p>
-</div>
+            <div class="kas-box">
 
-</div>
+                <div class="masuk">
+                    <span>Pemasukan</span>
+                    <strong>Rp 2.000.000</strong>
+                </div>
+
+                <div class="keluar">
+                    <span>Pengeluaran</span>
+                    <strong>Rp 500.000</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
 <!-- RUNNING TEXT -->
 <div class="marquee">
+
 <marquee>
 <span>INFO :</span>
 Selamat datang di Masjid Dzikir •
 Mari memakmurkan masjid •
+Mohon mematikan HP saat sholat •
 Jaga kebersihan masjid
 </marquee>
+
 </div>
 
 <script src="script.js"></script>
