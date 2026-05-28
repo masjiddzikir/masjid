@@ -1,3 +1,7 @@
+/* ===================================================== */
+/* FILE : style.css                                      */
+/* ===================================================== */
+
 *{
     margin:0;
     padding:0;
@@ -8,7 +12,8 @@
 body{
     background:#021107;
     color:white;
-    overflow:hidden;
+    overflow-x:hidden;
+    padding-bottom:80px;
 }
 
 /* BACKGROUND */
@@ -32,6 +37,19 @@ body::before{
     padding:20px 40px;
 }
 
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.logo-img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    filter:drop-shadow(0 0 10px #7CFC00);
+}
+
 .logo h1{
     font-size:45px;
     line-height:45px;
@@ -43,7 +61,7 @@ body::before{
 }
 
 .subtitle{
-    font-size:24px;
+    font-size:20px;
     color:#ddd;
     margin-top:10px;
 }
@@ -97,7 +115,7 @@ body::before{
     display:flex;
     justify-content:space-between;
     padding:15px;
-    margin-bottom:15px;
+    margin-bottom:10px;
     background:#0b2211;
     border-radius:15px;
     font-size:24px;
@@ -109,10 +127,41 @@ body::before{
     font-weight:bold;
 }
 
+/* IQOMAH */
+.iqomah-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#012b12;
+    border:1px solid #00ff66;
+    border-radius:15px;
+    padding:15px 20px;
+    margin-top:15px;
+}
+
+.iqomah-item .nama{
+    font-size:24px;
+    font-weight:bold;
+    color:white;
+}
+
+.iqomah-item small{
+    display:block;
+    color:#aaa;
+    font-size:14px;
+    margin-top:5px;
+}
+
+.countdown{
+    font-size:35px;
+    font-weight:bold;
+    color:#ffe600;
+}
+
 /* INFO */
 .info-item{
     margin-bottom:25px;
-    padding:14px;
+    padding:20px;
     background:#0b2211;
     border-radius:15px;
 }
@@ -128,13 +177,54 @@ body::before{
     color:#ddd;
 }
 
+/* KAS */
+.kas-box{
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+}
+
+.masuk,
+.keluar{
+    flex:1;
+    padding:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.05);
+    text-align:center;
+}
+
+.masuk{
+    border:2px solid #00ff88;
+}
+
+.keluar{
+    border:2px solid #ff4444;
+}
+
+.masuk span,
+.keluar span{
+    display:block;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.masuk strong{
+    color:#00ff88;
+    font-size:22px;
+}
+
+.keluar strong{
+    color:#ff5555;
+    font-size:22px;
+}
+
 /* RUNNING TEXT */
 .marquee{
     width:100%;
     background:#000;
     color:#fff;
     padding:15px;
-    position:absolute;
+    position:fixed;
     bottom:0;
     font-size:20px;
     border-top:2px solid #9cff00;
@@ -143,10 +233,17 @@ body::before{
 .marquee span{
     color:#ffc400;
 }
+
+/* RESPONSIVE */
 @media(max-width:1200px){
 
 .container{
     flex-direction:column;
+}
+
+.header{
+    flex-direction:column;
+    gap:20px;
 }
 
 .clock{
