@@ -1,7 +1,3 @@
-/* ===================================================== */
-/* FILE : style.css                                      */
-/* ===================================================== */
-
 *{
     margin:0;
     padding:0;
@@ -10,248 +6,198 @@
 }
 
 body{
-    background:#021107;
+    background:#001a0f;
     color:white;
-    overflow-x:hidden;
-    padding-bottom:80px;
+    overflow:hidden;
 }
 
-/* BACKGROUND */
-body::before{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:
-    radial-gradient(circle at center,
-    rgba(0,255,100,0.08),
-    transparent 70%);
-    z-index:-1;
-}
-
-/* HEADER */
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-}
-
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.logo-img{
-    width:90px;
-    height:90px;
-    object-fit:contain;
-    filter:drop-shadow(0 0 10px #7CFC00);
-}
-
-.logo h1{
-    font-size:45px;
-    line-height:45px;
-    font-weight:bold;
-}
-
-.logo span{
-    color:#9cff00;
-}
-
-.subtitle{
-    font-size:20px;
-    color:#ddd;
-    margin-top:10px;
-}
-
-/* CLOCK */
-.clock-box{
-    background:#071b0d;
-    border:2px solid #9cff00;
-    border-radius:20px;
-    padding:20px 40px;
-    text-align:center;
-    box-shadow:0 0 20px #00ff88;
-}
-
-.clock{
-    font-size:75px;
-    color:#9cff00;
-    font-weight:bold;
-}
-
-.wib{
-    font-size:20px;
-}
-
-/* CONTENT */
 .container{
-    display:flex;
-    gap:20px;
-    padding:20px;
-}
-
-/* CARD */
-.card{
-    flex:1;
-    background:#06150b;
-    border:2px solid #9cff00;
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 0 20px rgba(0,255,100,0.2);
-}
-
-/* TITLE */
-.card h2{
-    font-size:28px;
-    margin-bottom:20px;
-    color:white;
-}
-
-/* SHOLAT */
-.sholat-item{
-    display:flex;
-    justify-content:space-between;
+    width:100%;
+    height:100vh;
     padding:15px;
-    margin-bottom:10px;
-    background:#0b2211;
-    border-radius:15px;
-    font-size:24px;
-    border:1px solid rgba(0,255,100,0.3);
+    display:flex;
+    flex-direction:column;
 }
 
-.sholat-item span{
-    color:#ffc400;
-    font-weight:bold;
-}
+/* =========================
+HEADER
+========================= */
 
-/* IQOMAH */
-.iqomah-item{
+.top{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    background:#012b12;
-    border:1px solid #00ff66;
-    border-radius:15px;
-    padding:15px 20px;
-    margin-top:15px;
+    align-items:flex-start;
+    margin-bottom:15px;
 }
 
-.iqomah-item .nama{
-    font-size:24px;
+.logo-area h1{
+    font-size:58px;
     font-weight:bold;
-    color:white;
 }
 
-.iqomah-item small{
-    display:block;
-    color:#aaa;
-    font-size:14px;
-    margin-top:5px;
-}
-
-.countdown{
-    font-size:35px;
-    font-weight:bold;
-    color:#ffe600;
-}
-
-/* INFO */
-.info-item{
-    margin-bottom:25px;
-    padding:20px;
-    background:#0b2211;
-    border-radius:15px;
-}
-
-.info-item h3{
+.logo-area span{
     color:#9cff00;
-    margin-bottom:10px;
-    font-size:24px;
 }
 
-.info-item p{
-    font-size:18px;
-    color:#ddd;
+.logo-area p{
+    font-size:22px;
+    margin-top:8px;
 }
 
-/* KAS */
-.kas-box{
+.clock-box{
+    width:420px;
+    border:3px solid #9cff00;
+    border-radius:25px;
+    text-align:center;
+    padding:20px;
+    background:#01210f;
+    box-shadow:0 0 25px #00ff88;
+}
+
+#clock{
+    font-size:85px;
+    color:#9cff00;
+    font-weight:bold;
+}
+
+.clock-box p{
+    margin-top:10px;
+    font-size:22px;
+}
+
+/* =========================
+CONTENT
+========================= */
+
+.content{
     display:flex;
     gap:15px;
-    margin-top:15px;
+    flex:1;
 }
 
-.masuk,
-.keluar{
+/* =========================
+LEFT
+========================= */
+
+.left{
     flex:1;
-    padding:15px;
-    border-radius:15px;
-    background:rgba(255,255,255,0.05);
+    border:3px solid #9cff00;
+    border-radius:25px;
+    padding:20px;
+}
+
+.left h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.sholat{
+    background:#012b15;
+    border:1px solid #00aa55;
+    border-radius:20px;
+    padding:18px 25px;
+    margin-bottom:15px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:28px;
+}
+
+.jam{
+    color:#ffd000;
+    font-weight:bold;
+}
+
+/* =========================
+IQOMAH
+========================= */
+
+.iqomah-box{
+    margin-top:15px;
+    background:#021f10;
+    border:2px solid #00ff88;
+    border-radius:20px;
+    padding:18px;
     text-align:center;
 }
 
-.masuk{
-    border:2px solid #00ff88;
+.iqomah-title{
+    font-size:28px;
+    color:#9cff00;
+    margin-bottom:10px;
 }
 
-.keluar{
-    border:2px solid #ff4444;
+#iqomah{
+    font-size:55px;
+    font-weight:bold;
+    color:#ffffff;
 }
 
-.masuk span,
-.keluar span{
-    display:block;
+/* =========================
+RIGHT
+========================= */
+
+.right{
+    flex:1;
+    border:3px solid #9cff00;
+    border-radius:25px;
+    padding:20px;
+}
+
+.right h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.info-box{
+    background:#012b15;
+    border-radius:20px;
+    padding:18px;
+    margin-bottom:18px;
+}
+
+.info-box h3{
+    color:#9cff00;
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.info-box p{
     font-size:18px;
-    margin-bottom:8px;
+    line-height:1.5;
 }
 
-.masuk strong{
-    color:#00ff88;
-    font-size:22px;
+.kas{
+    font-size:42px;
+    font-weight:bold;
+    margin:10px 0;
 }
 
-.keluar strong{
-    color:#ff5555;
-    font-size:22px;
-}
+/* =========================
+RUNNING TEXT
+========================= */
 
-/* RUNNING TEXT */
 .marquee{
-    width:100%;
-    background:#000;
-    color:#fff;
-    padding:15px;
-    position:fixed;
-    bottom:0;
-    font-size:20px;
+    margin-top:12px;
+    background:black;
     border-top:2px solid #9cff00;
+    padding:10px;
+    font-size:20px;
+    color:white;
 }
 
 .marquee span{
-    color:#ffc400;
+    color:#ffd000;
+    font-weight:bold;
 }
 
-/* RESPONSIVE */
-@media(max-width:1200px){
+/* =========================
+LOGO
+========================= */
 
-.container{
-    flex-direction:column;
-}
-
-.header{
-    flex-direction:column;
-    gap:20px;
-}
-
-.clock{
-    font-size:60px;
-}
-
-.logo h1{
-    font-size:40px;
-}
-
+.logo{
+    width:90px;
+    margin-bottom:10px;
 }
